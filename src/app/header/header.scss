@@ -1,0 +1,30 @@
+:host {
+  background-color: #2C302C;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: block;
+  padding: 1rem;
+
+  h1 {
+    color: #BC8C2E;
+    margin: 0;
+    font-size: 3rem;
+  }
+
+  div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+    .nav-buttons {
+      gap: 1rem;
+    }
+  }
+
+  button {
+    background-color: #2C302C;
+    border-color: #D95D39;
+    color: #D95D39;
+  }
+}
