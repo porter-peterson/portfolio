@@ -22,9 +22,16 @@
     }
   }
 
-  button {
-    background-color: #2C302C;
-    border-color: #D95D39;
+  a {
     color: #D95D39;
+    border-color: #D95D39;
+    border-radius: 1rem;
+    font-size: 1.25rem;
+    
+    &:hover {
+      color: lighten(#D95D39, 10%);
+      border-color: lighten(#D95D39, 10%);
+      background-color: lighten(#2C302C, 10%);
+    }
   }
 }

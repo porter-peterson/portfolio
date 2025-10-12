@@ -1,8 +1,21 @@
 <div>
   <h1>Porter Peterson</h1>
   <div class="nav-buttons">
-    <button matButton="outlined" routerLink="/about">About</button>
-    <button matButton="outlined" routerLink="/projects">Projects</button>
-    <button matButton="outlined" routerLink="/contact">Contact</button>
+    <a matButton routerLink="/">
+      <mat-icon fontSet="material-symbols-outlined">home</mat-icon>
+      Home
+    </a>
+    <a matButton routerLink="/about">
+      <mat-icon fontSet="material-symbols-outlined">person</mat-icon>
+      About
+    </a>
+    <a matButton routerLink="/projects">
+      <mat-icon fontSet="material-symbols-outlined">work</mat-icon>
+      Projects
+    </a>
+    <a matButton routerLink="/contact">
+      <mat-icon fontSet="material-symbols-outlined">email</mat-icon>
+      Contact
+    </a>
   </div>
 </div>
