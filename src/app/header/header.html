@@ -1,19 +1,19 @@
 <div>
   <h1>Porter Peterson</h1>
   <div>
-    <a matButton routerLink="/">
+    <a matButton routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
       <mat-icon fontSet="material-symbols-outlined">home</mat-icon>
       Home
     </a>
-    <a matButton routerLink="/about">
+    <a matButton routerLink="/about-me" routerLinkActive="active">
       <mat-icon fontSet="material-symbols-outlined">person</mat-icon>
       About
     </a>
-    <a matButton routerLink="/projects">
+    <a matButton routerLink="/projects" routerLinkActive="active">
       <mat-icon fontSet="material-symbols-outlined">work</mat-icon>
       Projects
     </a>
-    <a matButton routerLink="/contact">
+    <a matButton routerLink="/contact" routerLinkActive="active">
       <mat-icon fontSet="material-symbols-outlined">email</mat-icon>
       Contact
     </a>
