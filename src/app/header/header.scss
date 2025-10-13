@@ -1,13 +1,12 @@
 :host {
-  background-color: #2C302C;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: var(--mat-sys-secondary-container);
   display: block;
   padding: 1rem;
 
   h1 {
-    color: #BC8C2E;
+    color: var(--mat-sys-on-secondary-container);
     margin: 0;
-    font-size: 3rem;
+    font-size: 2rem;
   }
 
   div {
@@ -16,22 +15,23 @@
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
-
-    .nav-buttons {
-      gap: 1rem;
-    }
   }
 
   a {
-    color: #D95D39;
-    border-color: #D95D39;
-    border-radius: 1rem;
-    font-size: 1.25rem;
+    color: var(--mat-sys-on-primary-container);
     
     &:hover {
-      color: lighten(#D95D39, 10%);
-      border-color: lighten(#D95D39, 10%);
-      background-color: lighten(#2C302C, 10%);
+      background-color: rgba(
+        var(--mat-sys-on-surface-rgb), 
+        var(--mat-sys-state-hover-state-layer-opacity)
+      );
+    }
+
+    &:active {
+      background-color: rgba(
+        var(--mat-sys-on-surface-rgb), 
+        var(--mat-sys-state-pressed-state-layer-opacity)
+      );
     }
   }
 }
