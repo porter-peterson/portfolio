@@ -27,11 +27,9 @@
       );
     }
 
-    &:active {
-      background-color: rgba(
-        var(--mat-sys-on-surface-rgb), 
-        var(--mat-sys-state-pressed-state-layer-opacity)
-      );
+    &.active {
+      color: var(--mat-sys-on-tertiary-container);
+      background-color: var(--mat-sys-primary-container);
     }
   }
 }
