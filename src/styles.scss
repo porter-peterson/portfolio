@@ -1,8 +1,20 @@
 @use '@angular/material' as mat;
 @use '_theme-colors.scss' as theme;
 
+:root {
+  --glass-blur: 15px;
+  --glass-border-opacity: 0.1;
+  
+  --glass-transparency: 70%; 
+}
+
+[data-theme='light'] {
+  --glass-transparency: 30%; 
+}
+
 html {
   color-scheme: dark;
+  
   @include mat.theme(
     (
       color: (
@@ -25,6 +37,7 @@ body {
   overflow-x: hidden;
   background-color: var(--mat-sys-surface); 
   font-family: 'Cabin', sans-serif;
+  color: var(--mat-sys-on-surface);
 }
 
 body::before {
@@ -36,14 +49,12 @@ body::before {
   height: 150%;
   z-index: -1;
 
-
   background-image: 
     radial-gradient(at 0% 0%, var(--mat-sys-secondary-container) 0px, transparent 50%),
     radial-gradient(at 100% 0%, var(--mat-sys-primary-container) 0px, transparent 50%),
     radial-gradient(at 100% 100%, var(--mat-sys-tertiary-container) 0px, transparent 50%);
 
   opacity: 0.8;
-
   animation: breathingTransform 40s ease-in-out infinite;
   will-change: transform;
 }

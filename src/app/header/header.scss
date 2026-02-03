@@ -1,11 +1,11 @@
 :host {
-  background-color: color-mix(in srgb, var(--mat-sys-secondary-container), transparent 50%);
+  background-color: color-mix(in srgb, var(--mat-sys-surface-container-high), transparent 25%);
   display: block;
   padding: 1rem;
   backdrop-filter: blur(75px);
 
   h1 {
-    color: var(--mat-sys-on-secondary-container);
+    color: var(--mat-sys-on-surface-container);
     margin: 0;
   }
 
@@ -18,7 +18,8 @@
   }
 
   a {
-    color: var(--mat-sys-on-primary-container);
+    color: var(--mat-sys-on-surface-variant);
+    transition: background-color 0.2s ease, color 0.2s ease;
     
     &:hover {
       background-color: rgba(
@@ -28,8 +29,16 @@
     }
 
     &.active {
-      color: var(--mat-sys-on-tertiary-container);
+      color: var(--mat-sys-on-primary-container);
       background-color: var(--mat-sys-primary-container);
+
+      &:hover {
+        background-color: color-mix(
+          in srgb, 
+          var(--mat-sys-primary-container), 
+          var(--mat-sys-on-primary-container) 10%
+        );
+      }
     }
   }
 
