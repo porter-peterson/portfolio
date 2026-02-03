@@ -1,12 +1,12 @@
 :host {
-  background-color: var(--mat-sys-secondary-container);
+  background-color: color-mix(in srgb, var(--mat-sys-secondary-container), transparent 50%);
   display: block;
   padding: 1rem;
+  backdrop-filter: blur(75px);
 
   h1 {
     color: var(--mat-sys-on-secondary-container);
     margin: 0;
-    font-size: 2rem;
   }
 
   div {
@@ -30,6 +30,17 @@
     &.active {
       color: var(--mat-sys-on-tertiary-container);
       background-color: var(--mat-sys-primary-container);
+    }
+  }
+
+  @media (max-width: 768px) {
+    h1 {
+      display: none;
+    }
+
+    div {
+      justify-content: center;
+      width: 100%;
     }
   }
 }

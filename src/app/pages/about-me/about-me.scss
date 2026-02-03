@@ -1,0 +1,73 @@
+:host {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.about-me-card {
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
+  background-color: color-mix(in srgb, var(--mat-sys-surface-container), transparent 70%);
+  border-radius: 2rem;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: row;
+  margin: 2rem;
+  width: 100%;
+
+  img {
+    border-radius: 2rem;
+    flex-shrink: 0;
+    height: auto;
+    margin: 2rem;
+    max-width: 400px;
+    object-fit: cover;
+  }
+
+  .description-section {
+    margin: auto 2rem;
+  }
+
+  p {
+    color: var(--mat-sys-secondary);
+    margin: 2rem;
+
+    strong {
+      color: var(--mat-sys-primary);
+    }
+  }
+
+  .link-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem;
+  }
+
+  a {
+    color: var(--mat-sys-on-primary-container);
+    
+    &:hover {
+      background-color: rgba(
+        var(--mat-sys-on-surface-rgb), 
+        var(--mat-sys-state-hover-state-layer-opacity)
+      );
+    }
+  }
+  
+  @media (max-width: 768px) {
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+
+    img {
+      margin: 1rem 0;
+      max-width: 80%;
+    }
+
+    p {
+      margin: 1rem 2rem;
+    }
+  }
+}
