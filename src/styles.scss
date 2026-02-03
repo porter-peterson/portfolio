@@ -22,33 +22,33 @@ html, body {
 
 body {
   margin: 0;
+  overflow-x: hidden;
+  background-color: var(--mat-sys-surface); 
   font-family: 'Cabin', sans-serif;
-  // Background color for the body
-  background-color: (--mat-sys-surface);
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: -25%;
+  left: -25%;
+  width: 150%;
+  height: 150%;
+  z-index: -1;
+
+
   background-image: 
     radial-gradient(at 0% 0%, var(--mat-sys-secondary-container) 0px, transparent 50%),
     radial-gradient(at 100% 0%, var(--mat-sys-primary-container) 0px, transparent 50%),
     radial-gradient(at 100% 100%, var(--mat-sys-tertiary-container) 0px, transparent 50%);
-  
-background-attachment: fixed;
-  background-size: 150% 150%; 
 
-  // 3. The Animation: 30 seconds for a very subtle 'breathing' effect
-  animation: breathingGradient 30s ease-in-out infinite;
+  opacity: 0.8;
+
+  animation: breathingTransform 40s ease-in-out infinite;
+  will-change: transform;
 }
 
-@keyframes breathingGradient {
-  0% {
-    background-position: 0% 0%;
-  }
-  50% {
-    background-position: 100% 100%;
-  }
-  100% {
-    background-position: 0% 0%;
-  }
-}
-
-h1, h2, h3, h4, h5, h6, .mat-headline-1, .mat-headline-2, .mat-headline-3, .mat-headline-4 {
-  font-family: 'Montserrat', sans-serif;
+@keyframes breathingTransform {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(-10%, -10%); }
 }
