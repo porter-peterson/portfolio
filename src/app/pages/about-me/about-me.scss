@@ -1,3 +1,5 @@
+@use '../../../_shared-utils.scss' as utils;
+
 :host {
   align-items: center;
   display: flex;
@@ -5,11 +7,7 @@
 }
 
 .about-me-card {
-  -webkit-backdrop-filter: blur(15px);
-  backdrop-filter: blur(15px);
-  background-color: color-mix(in srgb, var(--mat-sys-surface-container), transparent 70%);
-  border-radius: 2rem;
-  border: 2px solid rgba(255, 255, 255, 0.1);
+  @include utils.glass-card-styles;
   display: flex;
   flex-direction: row;
   margin: 2rem;
@@ -29,11 +27,10 @@
   }
 
   p {
-    color: var(--mat-sys-secondary);
+    color: var(--mat-sys-on-surface-container);
     margin: 2rem;
-
     strong {
-      color: var(--mat-sys-primary);
+      color: var(--mat-sys-on-secondary-container);
     }
   }
 
@@ -46,12 +43,16 @@
   }
 
   a {
-    color: var(--mat-sys-on-primary-container);
+    background-color: var(--mat-sys-primary);
+    color: var(--mat-sys-on-primary);
+    max-width: 280px;
+    width: 100%;
     
     &:hover {
-      background-color: rgba(
-        var(--mat-sys-on-surface-rgb), 
-        var(--mat-sys-state-hover-state-layer-opacity)
+      background-color: color-mix(
+        in srgb,
+        var(--mat-sys-primary),
+        var(--mat-sys-on-primary) 10%
       );
     }
   }

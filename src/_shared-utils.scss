@@ -1,0 +1,7 @@
+@mixin glass-card-styles {
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  backdrop-filter: blur(var(--glass-blur));
+  background-color: color-mix(in srgb, var(--mat-sys-surface-container), transparent var(--glass-transparency));
+  border: 1px solid color-mix(in srgb, var(--mat-sys-outline), transparent 80%);
+  border-radius: 2rem;
+}
