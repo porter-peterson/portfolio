@@ -10,26 +10,21 @@
   @include utils.glass-card-styles;
   display: flex;
   flex-direction: column;
-  margin: 2rem;
+  margin: 1rem;
+  padding: 2rem;
   width: 50%;
-
-  h1, p {
+  
+  p {
     color: var(--mat-sys-on-surface-container);
-    margin: 1rem 2rem 0 2rem;
   }
 
-  .contact-actions {
-    display: flex;
-    flex-direction: row;
+  mat-card-actions {
     gap: 1rem;
-    justify-content: center;
-    margin: 1rem 2rem;
-    
+
     a {
       background-color: var(--mat-sys-primary);
       color: var(--mat-sys-on-primary);
-      max-width: 280px;
-      width: 100%;
+      width: auto;
 
       fa-icon {
         font-size: 1.125rem;
@@ -43,24 +38,31 @@
         );
       }
     }
-  }
+  }  
 
   @media (max-width: 768px) {
-    width: 90%;
+    width: 100%;
 
-    .contact-actions {
-      align-items: center;
-      flex-direction: column;
+    mat-card-header, mat-card-content, mat-card-actions {
+      margin: 0;
+      padding: 0;
 
+      p {
+        margin: 1rem 0;
+      }
+    }
+
+    mat-card-actions {
+      align-items: center;    
+      display: flex;
+      flex-direction: column; 
+      margin-top: 1.5rem;
+      width: 100%;            
+      
       a {
-        display: flex;
-        justify-content: center;
-        max-width: 280px;
+        margin: 0;
+        max-width: 280px; 
         width: 100%;
-
-        fa-icon {
-          font-size: 1.2rem;
-        }
       }
     }
   }
