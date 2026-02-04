@@ -1,4 +1,68 @@
+@use '../../../_shared-utils.scss' as utils;
+
 :host {
+  align-items: center;
   display: flex;
   justify-content: center;
+}
+
+.project-card {
+  @include utils.glass-card-styles;
+  display: flex;
+  flex-direction: column;
+  margin: 2rem;
+  padding: 1rem 2rem;
+  width: 50%;
+
+  .project-card-header {
+    margin: 1rem 2rem;
+  }
+
+  .project-tech-stack {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+
+  a {
+    background-color: var(--mat-sys-primary);
+    color: var(--mat-sys-on-primary);
+    max-width: 280px;
+    width: 100%;
+
+    fa-icon {
+      font-size: 1.125rem;
+    }
+
+    &:hover {
+      background-color: color-mix(
+        in srgb,
+        var(--mat-sys-primary),
+        var(--mat-sys-on-primary) 10%
+      );
+    }
+    
+  }
+
+  @media (max-width: 768px) {
+    width: 90%;
+
+    .project-actions {
+      align-items: center;
+      flex-direction: column;
+
+      a {
+        display: flex;
+        justify-content: center;
+        max-width: 280px;
+        width: 100%;
+
+        fa-icon {
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
 }
