@@ -1,4 +1,68 @@
+@use '../../../_shared-utils.scss' as utils;
+
 :host {
-  display: flex;
+display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
+  align-items: stretch;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.project-card {
+  @include utils.glass-card-styles;
+  display: flex;
+  flex-direction: column;
+  min-height: 350px;
+  padding: 2rem;
+  width: 45%;
+
+  p {
+    color: var(--mat-sys-on-surface-container);
+  }
+
+  a {
+    background-color: var(--mat-sys-primary);
+    color: var(--mat-sys-on-primary);
+    width: auto;
+
+    fa-icon {
+      font-size: 1.125rem;
+    }
+
+    &:hover {
+      background-color: color-mix(
+        in srgb,
+        var(--mat-sys-primary),
+        var(--mat-sys-on-primary) 10%
+      );
+    }
+    
+  }
+
+}
+
+@media (max-width: 768px) {
+  :host {
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1.5rem;
+  }
+
+  .project-card {
+    width: 100%;
+    min-height: auto;
+    margin: 0;
+
+    mat-card-actions {
+      flex-direction: column;
+      align-items: center;
+      
+      a {
+        width: 100%;
+        max-width: 280px;
+      }
+    }
+  }
 }

@@ -1,40 +1,46 @@
 <mat-card class="about-me-card">
   <img mat-card-image src="images/portrait.webp" alt="portrait" />
 
-  <div class="description-section">
-    <p>
-      Hi, my name is <strong>Porter Peterson</strong> and I have been working in software development for over <strong>four years</strong>,
-      while simultaneously pursuing a degree in <strong>Computer Science</strong> at <strong>Western Governor's University</strong>.
-    </p>
+  <div>
+    <mat-card-header>
+      <mat-card-title>About Me</mat-card-title>
+      <mat-card-subtitle>Software Developer</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <p>
+        Hi, my name is <strong>Porter Peterson</strong> and I have been working in software development for over <strong>four years</strong>,
+        while simultaneously pursuing a degree in <strong>Computer Science</strong> at <strong>Western Governor's University</strong>.
+      </p>
 
-    <p>
-      Since starting my education and degree, I have always been passionate about creating and building software
-      and products with focuses on improving the lives of those who use it. Various interfaces of technology and
-      AI have become such pervasive factors in our lives, and I see them as a tool that can be utilized in helping
-      others.
-    </p>
+      <p>
+        Since starting my education and degree, I have always been passionate about creating and building software
+        and products with focuses on improving the lives of those who use it. Various interfaces of technology and
+        AI have become such pervasive factors in our lives, and I see them as a tool that can be utilized in helping
+        others.
+      </p>
 
-    <p>
-      When faced with a challenge or problem, I appreciate the ways in which programming allows me to use critical
-      thinking skills as well as multiple avenues to try and create something others can use or access. I have
-      confidently worked with <strong>JavaScript and Typescript</strong>for the past four years and find them to be accessible and
-      flexible for the work I strive to do. I also have experience building <strong>scalable web applications</strong> in the cloud.
-    </p>
+      <p>
+        When faced with a challenge or problem, I appreciate the ways in which programming allows me to use critical
+        thinking skills as well as multiple avenues to try and create something others can use or access. I have
+        confidently worked with <strong>JavaScript and Typescript</strong>for the past four years and find them to be accessible and
+        flexible for the work I strive to do. I also have experience building <strong>scalable web applications</strong> in the cloud.
+      </p>
 
-    <p>
-      Outside of the IDE, my life is defined by the same precision I bring to my code. I am an avid <strong>fly fisherman</strong> and
-      <strong>fly tyer</strong>. Hobbies that have taught me the value of patience, observation, and the importance of choosing the right
-      'tool' for the specific environment. I find that the most rewarding challenges are the
-      ones that require <strong>critical thinking</strong> and a touch of <strong>creativity</strong>. These pursuits keep me grounded and constantly
-      remind me that the best solutions, whether in a stream or a cloud-based application, require a deep understanding
-      of the ecosystem they live in.
-    </p>
+      <p>
+        Outside of the IDE, my life is defined by the same precision I bring to my code. I am an avid <strong>fly fisherman</strong> and
+        <strong>fly tyer</strong>. Hobbies that have taught me the value of patience, observation, and the importance of choosing the right
+        'tool' for the specific environment. I find that the most rewarding challenges are the
+        ones that require <strong>critical thinking</strong> and a touch of <strong>creativity</strong>. These pursuits keep me grounded and constantly
+        remind me that the best solutions, whether in a stream or a cloud-based application, require a deep understanding
+        of the ecosystem they live in.
+      </p>
 
-    <p>
-      Head over to my Projects or Contact page to see some of my work or get in touch!
-    </p>
+      <p>
+        Head over to my Projects or Contact page to see some of my work or get in touch!
+      </p>
+    </mat-card-content>
 
-    <div class="link-buttons">
+    <mat-card-actions align="end">
       <a matButton routerLink="/projects">
         <mat-icon fontSet="material-symbols-outlined">work</mat-icon>
         Projects
@@ -43,6 +49,6 @@
         <mat-icon fontSet="material-symbols-outlined">email</mat-icon>
         Contact
       </a>
-    </div>
+    </mat-card-actions>
   </div>
 </mat-card>

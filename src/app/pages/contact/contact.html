@@ -1,16 +1,22 @@
 <mat-card class="contact-card"> 
-    <h1>Let's Connect</h1>
+  <mat-card-header>
+    <mat-card-title>Let's Connect</mat-card-title>
+    <mat-card-subtitle>I'm available for Full-Stack opportunities</mat-card-subtitle>
+  </mat-card-header>
+
+  <mat-card-content>
     <p>
       I'm always looking for new opportunities to build impactful software. 
       The best way to reach me is on LinkedIn.
     </p>
+  </mat-card-content>
 
-    <div class="contact-actions">
-      <a mat-flat-button href="https://linkedin.com/in/porter-peterson" target="_blank">
-        <fa-icon [icon]="faLinkedin"></fa-icon> LinkedIn
-      </a>
-      <a mat-flat-button href="https://github.com/porter-peterson" target="_blank">
-        <fa-icon [icon]="faGithub"></fa-icon> GitHub
-      </a>
-    </div>
+  <mat-card-actions align="end">
+    <a mat-flat-button href="https://linkedin.com/in/porter-peterson" target="_blank">
+      <fa-icon [icon]="faLinkedin"></fa-icon> LinkedIn
+    </a>
+    <a mat-flat-button href="https://github.com/porter-peterson" target="_blank">
+      <fa-icon [icon]="faGithub"></fa-icon> GitHub
+    </a>
+  </mat-card-actions>
 </mat-card>
