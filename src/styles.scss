@@ -5,25 +5,36 @@
   --glass-blur: 15px;
   --glass-border-opacity: 0.1;
   
-  --glass-transparency: 70%; 
-}
-
-[data-theme='light'] {
   --glass-transparency: 30%; 
 }
 
 html {
-  color-scheme: dark;
-  
   @include mat.theme(
     (
       color: (
         primary: theme.$primary-palette,
         secondary: theme.$secondary-palette,
         tertiary: theme.$tertiary-palette,
+        theme-type: light,
       ),
       typography: Cabin,
       density: 0,
+    )
+  );
+}
+
+html[data-theme='dark'] {
+  color-scheme: dark;
+  --glass-transparency: 70%;
+
+  @include mat.theme(
+    (
+      color: (
+        primary: theme.$primary-palette,
+        secondary: theme.$secondary-palette,
+        tertiary: theme.$tertiary-palette,
+        theme-type: dark,
+      ),
     )
   );
 }
