@@ -27,7 +27,8 @@
               {
                 "glob": "**/*",
                 "input": "public"
-              }
+              },
+              "src/404.html"
             ],
             "styles": [
               "src/styles.scss"
@@ -85,12 +86,16 @@
               {
                 "glob": "**/*",
                 "input": "public"
-              }
+              },
+              "src/404.html"
             ],
             "styles": [
               "src/styles.scss"
             ]
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }
