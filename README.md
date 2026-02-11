@@ -1,5 +1,5 @@
 # Porter Peterson | Portfolio Website
-![Build Status](https://github.com/[username]/portfolio/actions/workflows/deploy.yml/badge.svg)
+![Build Status](https://github.com/porter-peterson/portfolio/actions/workflows/deploy.yml/badge.svg)
 
 A modern, high-performance portfolio website built with **Angular 21** and **Material 3**. This project showcases full-stack development principles, responsive UI/UX design, and automated deployment pipelines.
 
@@ -30,7 +30,7 @@ https://porter-peterson.github.io/portfolio
 
 1.  **Clone the repository**:
     ```bash
-    git clone [https://github.com/](https://github.com/)[username]/portfolio.git
+    git clone [https://github.com/](https://github.com/)porter-peterson/portfolio.git
     ```
 2.  **Install dependencies**:
     ```bash
