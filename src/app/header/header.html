@@ -1,17 +1,11 @@
 <div>
   <h1>Porter Peterson</h1>
-  <div>
-    <a matButton routerLink="/about-me" routerLinkActive="active">
-      <mat-icon fontSet="material-symbols-outlined">person</mat-icon>
-      About
+  <div class="header-actions">
+    <a mat-icon-button href="https://linkedin.com/in/porter-peterson" target="_blank" aria-label="LinkedIn">
+      <fa-icon [icon]="faLinkedin"></fa-icon>
     </a>
-    <a matButton routerLink="/projects" routerLinkActive="active">
-      <mat-icon fontSet="material-symbols-outlined">work</mat-icon>
-      Projects
-    </a>
-    <a matButton routerLink="/contact" routerLinkActive="active">
-      <mat-icon fontSet="material-symbols-outlined">email</mat-icon>
-      Contact
+    <a mat-icon-button href="https://github.com/porter-peterson" target="_blank" aria-label="GitHub">
+      <fa-icon [icon]="faGithub"></fa-icon>
     </a>
     <button mat-icon-button (click)="themeService.toggleTheme()">
       <mat-icon>{{ themeService.isDarkTheme() ? 'light_mode' : 'dark_mode' }}</mat-icon>
