@@ -1,0 +1,59 @@
+@use '../../_shared-utils.scss' as utils;
+
+:host {
+  display: block;
+  margin-top: 4rem;
+}
+
+footer {
+  background-color: color-mix(in srgb, var(--mat-sys-surface-container-high), transparent 25%);
+  backdrop-filter: blur(var(--glass-blur));
+  padding: 2rem;
+  border-top: 1px solid rgba(var(--mat-sys-on-surface-rgb), var(--glass-border-opacity));
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.copyright {
+  color: var(--mat-sys-on-surface-variant);
+  font-size: 0.875rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 0.5rem;
+
+  a {
+    color: var(--mat-sys-on-surface-variant);
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: var(--mat-sys-primary);
+    }
+
+    fa-icon {
+      font-size: 1.25rem;
+    }
+  }
+}
+
+.back-to-top {
+  color: var(--mat-sys-on-surface-variant);
+  
+  &:hover {
+    color: var(--mat-sys-primary);
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+}

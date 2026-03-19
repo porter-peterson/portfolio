@@ -17,27 +17,21 @@
     align-items: center;
   }
 
-  a {
-    color: var(--mat-sys-on-surface-variant);
-    transition: background-color 0.2s ease, color 0.2s ease;
-    
-    &:hover {
-      background-color: rgba(
-        var(--mat-sys-on-surface-rgb), 
-        var(--mat-sys-state-hover-state-layer-opacity)
-      );
-    }
+  .header-actions {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
 
-    &.active {
-      color: var(--mat-sys-on-primary-container);
-      background-color: var(--mat-sys-primary-container);
+    a, button {
+      color: var(--mat-sys-on-surface-variant);
+      transition: color 0.2s ease;
 
       &:hover {
-        background-color: color-mix(
-          in srgb, 
-          var(--mat-sys-primary-container), 
-          var(--mat-sys-on-primary-container) 10%
-        );
+        color: var(--mat-sys-primary);
+      }
+
+      fa-icon {
+        font-size: 1.25rem;
       }
     }
   }
@@ -50,6 +44,10 @@
     div {
       justify-content: center;
       width: 100%;
+    }
+    
+    .header-actions {
+      justify-content: center;
     }
   }
 }
